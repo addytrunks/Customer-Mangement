@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+<br>
+<div class="card">
+    <div class="card-body"> 
+        <h5 class="card-title">Create/Update Order</h5> 
+        <hr>
+        <form method="POST">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <input type="submit" class="btn btn-md btn-outline-primary btn-block" value="Submit">
+        </form>
+    </div>
+    
+</div>
+
+{% endblock %}

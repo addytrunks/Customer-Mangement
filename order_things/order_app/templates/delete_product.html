@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<div class="card">
+
+    <div class="card-body border-danger">
+        <div class="card-title h4">
+            Delete Product?
+        </div>
+        <hr>
+        <div class="card-text">
+            Are you sure you want to delete  '{{ product.name }}'?
+            <form method="POST" class="mt-3">
+                {% csrf_token %}
+                <a href="{% url 'home' %}" class="btn btn-md btn-outline-info">No, I wanna go back</a>
+
+                <input type="submit" class="btn btn-md btn-outline-danger" value="Delete">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
