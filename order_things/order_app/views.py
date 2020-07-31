@@ -47,7 +47,7 @@ def orderform(request):
             form.save()
             return HttpResponseRedirect('/')
     
-    form = OrderForm
+    form = OrderForm()
     context = {'form':form}
 
     return render(request,'order_form.html',context)
